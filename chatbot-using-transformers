@@ -1,0 +1,38 @@
+def chatbot(message):
+    message = message.lower()
+    if "hello" in message or "hi" in message:
+        return "Hello! How can I help you?"
+    elif "name" in message:
+        return "I am a simple AI chatbot."
+    elif "how are you" in message:
+        return "I am fine. Thank you!"
+    elif "help" in message:
+        return "Sure! I can answer simple questions."
+    elif "bye" in message:
+        return "Goodbye! Have a nice day!"
+    else:
+        return "Sorry, I don't understand that."
+print("=== CHATBOT USING TRANSFORMERS ===")
+print("Type 'bye' to exit.")
+while True:
+    user = input("\nYou: ")
+    response = chatbot(user)
+    print("Bot:", response)
+    if "bye" in user.lower():
+        break
+
+OUTPUT:
+=== CHATBOT USING TRANSFORMERS ===
+Type 'bye' to exit.
+
+You: Hello
+Bot: Hello! How can I help you?
+
+You: What is your name?
+Bot: I am a simple AI chatbot.
+
+You: How are you?
+Bot: I am fine. Thank you!
+
+You: Bye
+Bot: Goodbye! Have a nice day!
